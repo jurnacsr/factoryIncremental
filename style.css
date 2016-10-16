@@ -1,0 +1,123 @@
+body { 
+	background: #eaeff7;
+	/*display: none;*/
+}
+
+.game {
+    display: none;
+}
+
+.header {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.uiContainer {
+    float: left;
+    width: 50%;
+}
+
+.moneyText {
+    margin-top: 10px;
+}
+
+.buy-factory {
+    width: 250px;
+}
+
+.gameContainer {
+	/*width: 90%;*/
+	/*max-width: 952px;*/
+	border: 1px solid black;
+	margin: auto;
+    box-sizing: border-box;
+}
+
+.factory {
+	float: left;
+	display: inline-block;
+    width: 180px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.factoryProgressBar {
+
+}
+
+.allUpgradeContainer { 
+    position: relative;
+    top: -10%;
+}
+
+.updgradeContainer {
+    float: left;
+    margin-left: 1%;
+}
+
+.upgradeButton {
+    /*visibility: hidden;*/
+}
+
+.upgradeGlyph {
+    padding: 0px;
+    position: relative;
+    top: 0px;
+}
+
+.bonusIndicatorContainer {    
+    width: 90%;
+    /*border: 1px solid black;*/
+    margin: auto;
+    margin-top: -3px;
+}
+
+.bonusIndicator {
+    float: left;
+    width: calc(100% /3);
+    height: 8px;
+    margin-top: -4px;
+    margin-right: 0px;
+    visibility: hidden;
+}
+
+.verticalBonusIndicator {
+    background-color: #228B22;
+
+}
+.horizontalBonusIndicator {
+    background-color: #6495ED;
+
+}
+.neighborBonusIndicator {
+    background-color: #B22222;
+
+}
+
+
+/*clearfix
+http://www.jqui.net/css/css-clearfix/
+*/
+.clearfix:after { content: "\00A0"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+.clearfix{ display: inline-block;}
+html[xmlns] .clearfix { display: block;}
+* html .clearfix{ height: 1%;}
+.clearfix {display: block}
+
+/*turn off bootstrap progress animations*/
+.progress-bar {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}​

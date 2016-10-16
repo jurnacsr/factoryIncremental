@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Factory Incremental</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.81/jsrender.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- my stuff -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script id="factoryTemplate" type="text/x-jsrender">
+		<div id={{:id}} class="factory">
+		<div>
+			<span class='{{:id}}-status'> Awaiting go signal </span>
+			<div class="progress factoryProgressBar">
+				<div class="progress-bar progress-bar-success factoryProgressBarChild" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+			    </div>
+		    </div>
+	    </div>
+	    <div class="allUpgradeContainer clearfix">
+	    	<div class="{{:id}}-basicUpgradeContainer updgradeContainer">
+	    		<button class="upgradeButton basicUpgradeButton" data-toggle="tooltip" title="Upgrade Text Goes Here"><span class="glyphicon glyphicon-plus upgradeGlyph"></span></button>
+	    	</div>
+	    	<div class="{{:id}}-adjacentUpgradeContainer updgradeContainer">
+	    		<button class="upgradeButton neighborUpgradeButton" data-toggle="tooltip" title="Upgrade Text Goes Here"><span class="glyphicon glyphicon-fullscreen upgradeGlyph"></span></button>
+	    	</div>
+	    	<div class="{{:id}}-horizontalUpgradeContainer updgradeContainer">
+	    		<button class="upgradeButton horizontalUpgradeButton" data-toggle="tooltip" title="Upgrade Text Goes Here"><span class="glyphicon glyphicon-resize-horizontal upgradeGlyph"></span></button>
+	    	</div>
+	    	<div class="{{:id}}-verticalUpgradeContainer updgradeContainer">
+	    		<button class="upgradeButton verticalUpgradeButton" data-toggle="tooltip" title="Upgrade Text Goes Here"><span class="glyphicon glyphicon-resize-vertical upgradeGlyph"></span></button>
+	    	</div>
+	    	<div class="{{:id}}-managedUpgradeContainer updgradeContainer">
+	    		<button class="upgradeButton managedUpgradeButton" data-toggle="tooltip" title="Click to add a manager to this factory.  Production will be automated, but you will lose speed and income."><span class="glyphicon glyphicon-briefcase upgradeGlyph managedGlyph"></span></button>
+	    	</div>
+	    </div>
+	    <div class="bonusIndicatorContainer clearfix">
+		    <div class="bonusIndicator horizontalBonusIndicator"data-toggle="tooltip" title="Horizontal Bonus Applied"></div>
+		    <div class="bonusIndicator verticalBonusIndicator"data-toggle="tooltip" title="Vertical Bonus Applied"></div>
+		    <div class="bonusIndicator neighborBonusIndicator"data-toggle="tooltip" title="Neighbor Bonus Applied"></div>	
+	    <div>
+		</div>
+	</script>
+	<script src="game.js"></script>
+</head>
+<body>
+
+	<div class="loading">
+		Loading...
+	</div>
+	<div class="game">
+		<div class="header clearfix">
+			<div class="uiContainer moneyContainer">
+				<h3 class="moneyText">Money: <span class="money-span"></span></h3>
+			</div>
+			<div class="uiContainer buyFactoryContainer">
+				<button type="button" class="btn btn-primary btn-lg buy-factory">Buy Factory: <span class="factoryCostSpan"></span></button>
+			</div>
+		</div>
+		<div class="gameContainer clearfix">
+			<!-- fun stuff goes here! -->
+		</div>
+	</div>
+</body>
+</html>
